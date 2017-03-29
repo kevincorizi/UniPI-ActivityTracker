@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Attivita" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Attivita">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dataInizioAttivita" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="dataFineAttivita" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="descrizioneAttivita" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="matricola" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="tipoAttivita"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="tipoAttivita">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="string" type="xs:string" minOccurs="0" maxOccurs="6"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

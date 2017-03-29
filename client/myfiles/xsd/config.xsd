@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ConfigurazioneXML">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="stile"/>
+				<xs:element ref="progetto"/>
+				<xs:element ref="database"/>
+				<xs:element ref="server"/>
+				<xs:element ref="cache"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="stile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="font" type="xs:string"/>
+				<xs:element name="dimensioneFont" type="xs:decimal" nillable="false"/>
+				<xs:element name="formatoData" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="progetto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="numeroMassimoOre" type="xs:decimal"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="database">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nomeConnessione" type="xs:string"/>
+				<xs:element name="nomeUtente" type="xs:string"/>
+				<xs:element name="password" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="server">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="clientIP" type="xs:string"/>
+				<xs:element name="serverIP" type="xs:string"/>
+				<xs:element name="portaServer" type="xs:decimal"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="cache">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="percorso" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

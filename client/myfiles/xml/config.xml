@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigurazioneXML>
+	<stile>
+		<font>Tahoma, Geneva, sans-serif</font>
+		<dimensioneFont>13</dimensioneFont>
+		<formatoData>dd/MM/yyyy HH:mm</formatoData>
+	</stile>
+	<progetto>
+		<numeroMassimoOre>45</numeroMassimoOre>
+	</progetto>
+	<database>
+		<nomeConnessione>jdbc:mysql://localhost:3306/registroattivita</nomeConnessione>
+		<nomeUtente>root</nomeUtente>
+		<password></password>
+	</database>
+	<server>
+		<clientIP>127.0.0.1</clientIP>
+		<serverIP>127.0.0.1</serverIP>
+		<portaServer>1234</portaServer>
+	</server>
+	<cache>
+		<percorso>./myfiles/bin/attivita.bin</percorso>
+	</cache>
+</ConfigurazioneXML>
